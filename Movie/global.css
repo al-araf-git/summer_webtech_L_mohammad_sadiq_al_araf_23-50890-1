@@ -1,0 +1,607 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #13151f;
+    font-family: 'MyFont', sans-serif;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('assets/fonts/icofont7858.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Background */
+.home-page .background-image {
+    background-image: url("assets/img/hero-area.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.background-image {
+    background-image: url("assets/img/breadcrumb.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Main Card */
+.movie-card {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background-color: #13151f;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    margin-top: 250px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Left Image */
+.movie-image {
+    width: 400px;
+    background-image: url("assets/img/slide2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Right Info */
+.movie-card-info {
+    padding: 30px;
+    color: #fff;
+    flex: 1;
+}
+
+.movie-card-info h2 {
+    font-size: 28px;
+    margin: 0 0 10px;
+}
+
+.rating {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.rating span {
+    color: #ccc;
+    margin-left: 10px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #bbb;
+    margin: 20px 0;
+}
+
+.cast {
+    margin: 20px 0;
+}
+
+.cast h3 {
+    margin-bottom: 10px;
+}
+
+.cast-members img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 2px solid #13151f;
+}
+
+/* Actions (Watch + Button) */
+.actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.trailer-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #7e3ff2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #9b60ff;
+}
+
+/* Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff4d6d;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #e50914;
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-btn {
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tickets-btn {
+    background: #e50914;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.tickets-btn:hover {
+    background: #ff3366;
+}
+
+.headlines {
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    margin-left: 150px;
+    margin-bottom: 2px;
+    margin-right: 150px;
+}
+
+.headlines p {
+    margin-top: 5px;
+}
+
+.headlines img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+hr {
+    border-radius: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+    color: white;
+    margin-top: -30px;
+}
+
+.movie {
+    margin: 20px 0;
+    margin-bottom: 10px;
+}
+
+.rating-heaings {
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+.rating-heaings span {
+    font-size: 20px;
+}
+
+/* Trailer section */
+.trailers-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+/* Featured trailer */
+.featured-trailer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.featured-trailer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-trailer:hover img {
+    transform: scale(1.05);
+}
+
+.featured-trailer .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    border-radius: 0 0 12px 12px;
+}
+
+.featured-trailer .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.featured-trailer .stars {
+    color: gold;
+    margin: 5px 0;
+}
+
+.featured-trailer .voters {
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* Play button */
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.play-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.play-btn::before {
+    content: "▶";
+    font-size: 26px;
+    color: white;
+    margin-left: 3px;
+}
+
+/* Side trailers */
+.side-trailers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-trailer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.side-trailer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.side-trailer:hover img {
+    transform: scale(1.05);
+}
+
+.side-trailer .play-btn {
+    width: 50px;
+    height: 50px;
+}
+
+/* Video Modal */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+}
+
+.video-modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.video-modal video {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Description text at top */
+.movie-desc {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Buttons container at bottom */
+.action-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    display: flex;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Button styles */
+.icon-btn {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 77, 109, 0.8);
+}
+
+/* Hover effects */
+.featured-trailer:hover .movie-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.featured-trailer:hover .action-buttons {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Circular profile pic */
+.profile-pic-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px; /* adjust if needed */
+    right: 0;
+    background: #1a1c29; /* changed to dark theme */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.profile-dropdown.active {
+    display: block;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff; /* text color white for dark background */
+    text-decoration: none;
+}
+
+.profile-dropdown a:hover {
+    background-color: #333; /* hover color stays darker */
+}
+
+
+/* .profile-pic-wrapper:hover+.profile-dropdown {
+    display: block;
+} */
+
+
+/* Footer */
+.site-footer {
+    position: relative;
+    background: url('assets/img/footer-bg.png') no-repeat center center/cover;
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
+.footer-overlay {
+    background: rgba(0,0,0,0.85); /* dark overlay */
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+}
+
+.footer-logo {
+    color: #ff4d6d;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #fff;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #e50914;
+}
+
+/* Newsletter */
+.newsletter input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background: #1a1c29;
+    color: #fff;
+}
+
+.newsletter button {
+    background: transparent;
+    border: none;
+    color: #e50914;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.newsletter button:hover {
+    color: #ff4d6d;
+}
+
+/* Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 40px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #888;
+}
+
+.back-to-top {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-to-top:hover {
+    color: #e50914;
+}
